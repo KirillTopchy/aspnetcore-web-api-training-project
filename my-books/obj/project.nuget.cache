@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "/R3si+yTb2enfSSxwbqw702w5pj2GQclVounuIb5pE9xlUY771OsOjk5mjSFpWU1vGp232nhKrL30lI/Ctraog==",
+  "success": true,
+  "projectFilePath": "D:\\Programming\\Pet_Projects\\my-books\\my-books\\my-books.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\9er0j\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\5.0.15\\microsoft.netcore.app.host.win-x64.5.0.15.nupkg.sha512"
+  ],
+  "logs": []
+}
