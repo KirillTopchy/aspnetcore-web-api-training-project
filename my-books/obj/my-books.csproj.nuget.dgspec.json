@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Programming\\Pet_Projects\\my-books\\my-books\\my-books.csproj": {}
+    "D:\\Programming\\Pet_Projects\\aspnetcore-web-api-training-project\\my-books\\my-books.csproj": {}
   },
   "projects": {
-    "D:\\Programming\\Pet_Projects\\my-books\\my-books\\my-books.csproj": {
+    "D:\\Programming\\Pet_Projects\\aspnetcore-web-api-training-project\\my-books\\my-books.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Programming\\Pet_Projects\\my-books\\my-books\\my-books.csproj",
+        "projectUniqueName": "D:\\Programming\\Pet_Projects\\aspnetcore-web-api-training-project\\my-books\\my-books.csproj",
         "projectName": "my-books",
-        "projectPath": "D:\\Programming\\Pet_Projects\\my-books\\my-books\\my-books.csproj",
+        "projectPath": "D:\\Programming\\Pet_Projects\\aspnetcore-web-api-training-project\\my-books\\my-books.csproj",
         "packagesPath": "C:\\Users\\9er0j\\.nuget\\packages\\",
-        "outputPath": "D:\\Programming\\Pet_Projects\\my-books\\my-books\\obj\\",
+        "outputPath": "D:\\Programming\\Pet_Projects\\aspnetcore-web-api-training-project\\my-books\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -43,6 +43,12 @@
       "frameworks": {
         "net5.0": {
           "targetAlias": "net5.0",
+          "dependencies": {
+            "Swashbuckle.AspNetCore": {
+              "target": "Package",
+              "version": "[6.3.0, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",

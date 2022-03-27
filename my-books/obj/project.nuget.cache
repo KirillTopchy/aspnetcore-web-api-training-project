@@ -1,9 +1,15 @@
 {
   "version": 2,
-  "dgSpecHash": "/R3si+yTb2enfSSxwbqw702w5pj2GQclVounuIb5pE9xlUY771OsOjk5mjSFpWU1vGp232nhKrL30lI/Ctraog==",
+  "dgSpecHash": "zUX07HasInH+SWnbfQjOosjvy0jmyamQM56xaepmKdS7kF1tHtrv8Xbtv0bj24352tWeTpaHKJT4aSklkb43Sg==",
   "success": true,
-  "projectFilePath": "D:\\Programming\\Pet_Projects\\my-books\\my-books\\my-books.csproj",
+  "projectFilePath": "D:\\Programming\\Pet_Projects\\aspnetcore-web-api-training-project\\my-books\\my-books.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\9er0j\\.nuget\\packages\\microsoft.extensions.apidescription.server\\3.0.0\\microsoft.extensions.apidescription.server.3.0.0.nupkg.sha512",
+    "C:\\Users\\9er0j\\.nuget\\packages\\microsoft.openapi\\1.2.3\\microsoft.openapi.1.2.3.nupkg.sha512",
+    "C:\\Users\\9er0j\\.nuget\\packages\\swashbuckle.aspnetcore\\6.3.0\\swashbuckle.aspnetcore.6.3.0.nupkg.sha512",
+    "C:\\Users\\9er0j\\.nuget\\packages\\swashbuckle.aspnetcore.swagger\\6.3.0\\swashbuckle.aspnetcore.swagger.6.3.0.nupkg.sha512",
+    "C:\\Users\\9er0j\\.nuget\\packages\\swashbuckle.aspnetcore.swaggergen\\6.3.0\\swashbuckle.aspnetcore.swaggergen.6.3.0.nupkg.sha512",
+    "C:\\Users\\9er0j\\.nuget\\packages\\swashbuckle.aspnetcore.swaggerui\\6.3.0\\swashbuckle.aspnetcore.swaggerui.6.3.0.nupkg.sha512",
     "C:\\Users\\9er0j\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\5.0.15\\microsoft.netcore.app.host.win-x64.5.0.15.nupkg.sha512"
   ],
   "logs": []
