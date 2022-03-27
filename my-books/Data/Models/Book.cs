@@ -14,5 +14,9 @@ namespace my_books.Data.Models
         public DateTime DateAdded { get; set; }
         public DateTime? DateRead { get; set; }
         public int? Rate { get; set; }
+
+        //Navigation Properties
+        public int PublisherId { get; set; }
+        public Publisher Publisher { get; set; }
     }
 }
