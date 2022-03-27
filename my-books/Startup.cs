@@ -67,6 +67,7 @@ namespace my_books
                     pattern: "{controller=Home}/{action=Index}/{id?}");
             });
 
+            // adding default books to DB.
             AppDbInitializer.Seed(app);
         }
     }

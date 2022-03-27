@@ -64,5 +64,24 @@ namespace my_books.Data.Services
 
             return _book;
         }
+
+        public void DeleteAllBooks()
+        {
+            if (_context.Books.Any())
+            {
+                _context.Books.RemoveRange(_context.Books.ToList());
+                _context.SaveChanges();
+            }
+        }
+
+        public void DeleteBookById(int id)
+        {
+            var book = GetBookById(id);
+            if (book != null)
+            {
+                _context.Books.Remove(book);
+                _context.SaveChanges();
+            }
+        }
     }
 }
