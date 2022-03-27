@@ -31,6 +31,8 @@ namespace my_books
 
             //Configure the Services
             services.AddTransient<BooksService>();
+            services.AddTransient<AuthorsService>();
+            services.AddTransient<PublishersService>();
 
             services.AddSwaggerGen(c =>
             {
@@ -68,7 +70,7 @@ namespace my_books
             });
 
             // adding default books to DB.
-            AppDbInitializer.Seed(app);
+            // AppDbInitializer.Seed(app);
         }
     }
 }
