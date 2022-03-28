@@ -24,15 +24,19 @@ namespace my_books.Data.Services
             _context.SaveChanges();
         }
 
-        public PublisherWithBooksVM GetPublisherWithBooks(int publisherId)
+        public PublisherWithBooksAndAuthorsVM GetPublisherData(int publisherId)
         {
-            var publisher = _context.Publishers.Where(n => n.Id == publisherId).Select(n => new PublisherWithBooksVM()
+            var publisherData = _context.Publishers.Where(n => n.Id == publisherId).Select(n => new PublisherWithBooksAndAuthorsVM()
             {
-                FullName = n.Name,
-                BookTitles = n.Books.Select(n => n.Title).ToList()
+                Name = n.Name,
+                BookAuthors = n.Books.Select(n => new BookAuthorVM()
+                {
+                    BookName = n.Title,
+                    BookAuthors = n.Book_Authors.Select(n => n.Author.FullName).ToList()
+                }).ToList()
             }).FirstOrDefault();
 
-            return publisher;   
+            return publisherData;   
         }
     }
 }

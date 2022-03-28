@@ -7,9 +7,15 @@ namespace my_books.Data.ViewModels
         public string Name { get; set; }
     }
 
-    public class PublisherWithBooksVM
+    public class PublisherWithBooksAndAuthorsVM
     {
-        public string FullName { get; set; }
-        public List<string> BookTitles { get; set; }
+        public string Name { get; set; }
+        public List<BookAuthorVM> BookAuthors { get; set; }
+    }
+
+    public class BookAuthorVM
+    {
+        public string BookName { get; set; }
+        public List<string> BookAuthors { get; set; }
     }
 }

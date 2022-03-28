@@ -22,10 +22,10 @@ namespace my_books.Controllers
             return Ok();
         }
 
-        [HttpGet("get-publisher-with-books-by-id/{id:int}")]
-        public IActionResult GetPublisherWithBooksById(int id)
+        [HttpGet("get-publisher-books-with-authors/{id:int}")]
+        public IActionResult GetPublisherData(int id)
         {
-            var publisherWithBooks = _publishersService.GetPublisherWithBooks(id);
+            var publisherWithBooks = _publishersService.GetPublisherData(id);
             return Ok(publisherWithBooks);
         }
     }
