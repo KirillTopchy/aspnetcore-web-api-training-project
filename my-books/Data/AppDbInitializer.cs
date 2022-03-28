@@ -24,7 +24,6 @@ namespace my_books.Data
                         DateRead = DateTime.Now.AddDays(-10),
                         Rate = 4,
                         Genre = "Fantasy",
-                        Author = "First Author",
                         CoverUrl = "https....",
                         DateAdded = DateTime.Now
                     }, 
@@ -34,7 +33,6 @@ namespace my_books.Data
                         Description = "2nd Book Description",
                         IsRead = false,
                         Genre = "Poem",
-                        Author = "Second Author",
                         CoverUrl = "https....",
                         DateAdded = DateTime.Now
                     });
