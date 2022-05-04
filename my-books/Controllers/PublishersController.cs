@@ -37,7 +37,7 @@ namespace my_books.Controllers
         }
 
         [HttpGet("get-publisher-by-id/{id:int}")]
-        public Publisher GetPublisherById(int id)
+        public ActionResult<Publisher> GetPublisherById(int id)
         {
             // to test remove comment
             //throw new Exception("This is an exception that will be handled by middleware");
@@ -49,8 +49,8 @@ namespace my_books.Controllers
                 //return Ok(response);
             }
 
-            return null;
-            //return NotFound();
+            //return null;
+            return NotFound();
         }
 
         [HttpGet("get-publisher-books-with-authors/{id:int}")]
