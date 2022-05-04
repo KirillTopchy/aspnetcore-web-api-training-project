@@ -17,10 +17,10 @@ namespace my_books.Controllers
         }
 
         [HttpPost("add-book-with-authors")]
-        public IActionResult AddBook([FromBody]BookVM book)
+        public IActionResult AddBook([FromBody] BookVM book)
         {
-            _booksService.AddBookWithAuthors(book);
-            return Ok();
+            var newBook = _booksService.AddBookWithAuthors(book);
+            return Created(nameof(AddBook), newBook);
         }
 
         [HttpGet("get-all-books")]
@@ -34,21 +34,39 @@ namespace my_books.Controllers
         public IActionResult GetBookById(int id)
         {
             var book = _booksService.GetBookById(id);
-            return Ok(book);
+
+            if (book != null)
+            {
+                return Ok(book);
+            }
+
+            return NotFound();
         }
 
         [HttpPut("update-book-by-id/{id:int}")]
         public IActionResult UpdateBookById(int id, [FromBody] BookVM book)
         {
             var updatedBook = _booksService.UpdateBookById(id, book);
-            return Ok(updatedBook);
+
+            if (updatedBook != null)
+            {
+                return Ok(updatedBook);
+            }
+
+            return NotFound();
         }
 
         [HttpDelete("delete-book-by-id/{id:int}")]
         public IActionResult DeleteBookById(int id)
         {
-            _booksService.DeleteBookById(id);
-            return Ok();
+            var deletedBook = _booksService.DeleteBookById(id);
+
+            if (deletedBook != null)
+            {
+                return Ok(deletedBook);
+            }
+
+            return NotFound();
         }
 
         [HttpDelete("delete-all-books")]
