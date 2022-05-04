@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Http;
+﻿using System;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using my_books.Data.Services;
 using my_books.Data.ViewModels;
@@ -38,27 +39,36 @@ namespace my_books.Controllers
         [HttpGet("get-publisher-books-with-authors/{id:int}")]
         public IActionResult GetPublisherData(int id)
         {
-            var publisherWithBooks = _publishersService.GetPublisherData(id);
-
-            if (publisherWithBooks != null)
+            try
             {
-                return Ok(publisherWithBooks);
-            }
+                var publisherWithBooks = _publishersService.GetPublisherData(id);
 
-            return NotFound();
+                if (publisherWithBooks != null)
+                {
+                    return Ok(publisherWithBooks);
+                }
+
+                return NotFound();
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(ex.Message);
+            }
         }
 
         [HttpDelete("delete-publisher-by-id/{id}")]
         public IActionResult DeletePublisherById(int id)
         {
-            var response = _publishersService.DeletePublisherById(id);
-
-            if (response != null)
+            try
             {
-                return Ok(response);
-            }
+                 _publishersService.DeletePublisherById(id);
+                 return Ok();
 
-            return NotFound();
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(ex.Message);
+            }
         }
     }
 }

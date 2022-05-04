@@ -43,7 +43,7 @@ namespace my_books.Data.Services
             return publisherData;   
         }
 
-        public Publisher DeletePublisherById(int id)
+        public void DeletePublisherById(int id)
         {
             var publisher = _context.Publishers.FirstOrDefault(n => n.Id == id);
 
@@ -52,8 +52,10 @@ namespace my_books.Data.Services
                 _context.Publishers.Remove(publisher);
                 _context.SaveChanges();
             }
-
-            return publisher;
+            else
+            {
+                throw new Exception($"The publisher with id {id} does not exist");
+            }
         }
     }
 }
