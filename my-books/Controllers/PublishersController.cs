@@ -38,7 +38,7 @@ namespace my_books.Controllers
         }
 
         [HttpGet("get-publisher-by-id/{id:int}")]
-        public CustomActionResult GetPublisherById(int id)
+        public IActionResult GetPublisherById(int id)
         {
             // to test remove comment
             //throw new Exception("This is an exception that will be handled by middleware");
@@ -47,28 +47,28 @@ namespace my_books.Controllers
             if (response != null)
             {
 
-                var responseObject = new CustomActionResultVM()
-                {
-                    Publisher = response
-                };
+                //var responseObject = new CustomActionResultVM()
+                //{
+                //    Publisher = response
+                //};
 
-                return new CustomActionResult(responseObject);
+                //return new CustomActionResult(responseObject);
 
                 //return response;
-                //return Ok(response);
+                return Ok(response);
             }
-            else
-            {
-                var responseObject = new CustomActionResultVM()
-                {
-                    Exception = new Exception("this is coming from publishers controller")
-                };
+            //else
+            //{
+            //    var responseObject = new CustomActionResultVM()
+            //    {
+            //        Exception = new Exception("this is coming from publishers controller")
+            //    };
 
-                return new CustomActionResult(responseObject);
-            }
+            //    return new CustomActionResult(responseObject);
+            //}
 
             //return null;
-            //return NotFound();
+            return NotFound();
         }
 
         [HttpGet("get-publisher-books-with-authors/{id:int}")]
